@@ -19,17 +19,22 @@ Two types of models were chosen, based on their ability to assist in feature sel
 ## How the models performed
 
 ### SVC 
+![svc_classification_report matrix](./resources/svc_classification_report.png "SVC classification report matrix")
+
 Model accuracy began at ~`0.60`. Using only important features identified by the Random Forest model, it improved to `0.857`. This was achieved using a train-test split of 80-20 and the default SVC kernel (`rbf`). Using `linear` and `poly` kernel settings were resource and time intensive.
 
 SVC appears to be the better choice for potential planet classification, having especially high precision for identifying false positives.
 
 ### K Nearest Neighbors
-Achieved model accuracy of `0.866` with `k=17`.
+![knn_classification_report matrix](./resources/knn_classification_report.png "K Nearest Neighbors classification report matrix")
+Achieved model accuracy of `0.866` with `k=17`, using important features identified by the Random Forest model.
 
-Even with GridSearchCV tuning and supposedly high scores, the model did not actually classify planets (as determined by a manual review of the classifications).
+The K Nearest Neighbors model is much faster than SVC, which may make it a better model to use on larger datasets. However, for this dataset (which is relatively small), speed is not as much of an issue.
 
+While the model accuracy is slightly higher overall, the precision for classifying different planet types indicated in the `classification_report` is lower.
 
 ## Future work
+* Revisit `support` in both models' `classification_reports` to determine if sample rebalancing is needed 
 * Test other models
 * Visualize results of all models
 
