@@ -7,7 +7,7 @@ This repository contains four Jupyter notebooks—one per model—and copy of th
 Two types of models were chosen, based on their ability to assist in feature selection or accurately classify values given a training set.
 
 * Feature selection: [`Decision Tree Classifier`](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier) and [`Random Forest Classifier`](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
-* Classification: [`SVC`](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC) (a type of [Support Vector Machine](https://scikit-learn.org/stable/modules/svm.html) and [`K Nearest Neighbor`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html#sklearn.neighbors.KNeighborsClassifier)
+* Classification: [`SVC`](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html#sklearn.svm.SVC) (a type of [Support Vector Machine](https://scikit-learn.org/stable/modules/svm.html)) and [`K Nearest Neighbor`](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html#sklearn.neighbors.KNeighborsClassifier)
 
 ## Preparing the models
 1. Determined feature importances by running `Decision Tree` and `Random Forest` models. The features that showed the most promise were: `'koi_fpflag_co', 'koi_fpflag_nt', 'koi_fpflag_ss', 'koi_model_snr', 'koi_prad', 'koi_prad_err2', 'koi_duration_err2'`.
